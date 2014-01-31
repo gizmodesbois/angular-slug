@@ -55,12 +55,6 @@ module.exports = function(grunt) {
         },
         clean: {
             target: ['dist']
-        },
-        open: {
-            dev: {
-                path: 'http://localhost:<%= express.options.port%>',
-                app: 'Google Chrome'
-            }
         }
     });
 
