@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" class="no-js" ng-app="ng-slug"> <!--<![endif]-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<!-- Definition -->
+		<title>Ng-Angular-Slug</title>
+		<link rel="icon" href="favicon.ico">
+		<meta name="description" content="Angular slug library" />
+		<meta name="keywords" content="angular,slug,library" />
+
+		<!-- Microformats -->
+		<link rel="profile" href="http://microformats.org/profile/specs">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+
+		<link rel="stylesheet" href="assets/css/screen.css" media="screen" />
+
+		<!-- JS -->
+		<script src="./src/libs/modernizr.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<h1>Bienvenue dans cette librairie qui Slug les gens !</h1>
+			<h2>Services</h2>
+			<form ng-controller="SlugCtrl1" role="form">
+				<div class="form-group">
+					<label for="name">Name :</label>
+					<input type="text" class="form-control" placeholder="Enter string to slug" ng-model="name" required>
+				</div>
+				<div class="form-group">
+					<p>{{name | slug}}</p>
+				</div>
+			</form>
+			<h2>Directives</h2>
+			<form ng-controller="SlugCtrl2" role="form">
+				<div class="form-group">
+					<label for="name">Name :</label>
+					<input type="text" class="form-control" placeholder="Enter string to slug" ng-model="name" required>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Your string is gonna be slug here" ng-model="slug" slug-input slug-watch="{{name}}" >
+				</div>
+			</form>
+			<h2>Filters</h2>
+			<form ng-controller="SlugCtrl3" role="form">
+				<div class="form-group">
+					<label for="name">Name :</label>
+					<input type="text" class="form-control" placeholder="Enter string to slug" ng-model="name" required>
+				</div>
+				<div class="form-group">
+					<p>{{name | slug}}</p>
+				</div>
+			</form>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script src="./src/frameworks/angular.min.js"></script>
+		<!--[if (lt IE 9) & (gte IE 7)]>
+			<script src="../src/helpers/js/domassistant.min.js"></script>
+			<script src="../src/helpers/js/selectivizr.min.js"></script>
+			<script src="../src/helpers/js/respond.min.js"></script>
+		<![endif]-->
+		<script src="./dist/libs/ng-angular-slug.min.js"></script>
+		<script src="./src/scripts/ng-app.js"></script>
+	</body>
+</html>
