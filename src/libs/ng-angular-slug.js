@@ -289,17 +289,17 @@ angular
             slug: _slug
         };
     })
-    .directive('slug', ["Slug",
+    .directive("slugDir", ["Slug",
         function(Slug) {
             return {
-                restrict: 'EA',
+                restrict: "EA",
                 scope: {
-                    to: "="
+                    to: "=",
                 },
                 transclude: true,
                 replace: true,
-                template: "<div ng-translude></div>",
-                link: function(scope, element, attrs) {
+                template: "<div ng-transclude></div>",
+                link: function(scope, elem, attrs) {
                     if (!attrs.from) {
                         throw "must set attribute 'from'";
                     }
